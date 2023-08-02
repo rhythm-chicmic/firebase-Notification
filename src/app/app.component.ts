@@ -13,10 +13,11 @@ export class AppComponent implements OnInit{
     this.requestPermission();
     this.listen();
   }
+
   requestPermission() {
     const messaging = getMessaging();
     getToken(messaging, 
-     { vapidKey: environment.firebase.vapidKey}).then(
+     { vapidKey: "BKS75fF0cLZFmN-eZNWJNOR3Dcyoj6lkP04Blu7KMZtnUHWgwhHciUMtZoGrnPXyhMZSS6HQAdZn4bdcxFs3GjM" }).then(
        (currentToken) => {
          if (currentToken) {
            console.log("Hurraaa!!! we got the token.....");
